@@ -16,12 +16,15 @@
     "tailwindcss": "^3.3.2",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "http://cjkehoe.github.io/Portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch:css": "postcss src/tailwind.css -o src/index.css"
+    "watch:css": "postcss src/tailwind.css -o src/index.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
